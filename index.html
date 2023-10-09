@@ -99,7 +99,7 @@
         const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-        countdown.textContent = `${months}m ${days}d ${hours}h ${minutes}m ${seconds}s`;
+        countdown.textContent = `~${months}m or ${days}d ${hours}h ${minutes}m ${seconds}s`;
       }, 1000);
       // JavaScript code for the image slideshow
       const images = document.querySelectorAll(".image");
