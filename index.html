@@ -6,19 +6,13 @@
     <style>
       /* CSS styles for the image slideshow */
       .image-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        position: relative;
+        max-width: 100%;
         overflow: hidden;
       }
       .image {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: 100%;
+        height: auto;
         opacity: 0;
         transition: opacity 1s ease-in-out;
       }
@@ -27,35 +21,23 @@
       }
       /* CSS styles for the countdown timer */
       .countdown-container {
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 4rem;
         text-align: center;
+        font-size: 4rem;
         font-family: 'Cinzel Decorative', cursive;
         color: #fff;
         text-shadow: 5px 5px #000000;
       }
       /* CSS styles for the header */
       .header-container {
-        position: absolute;
-        top: 1%;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 5rem;
         text-align: center;
+        font-size: 5rem;
         font-family: 'Cinzel Decorative', cursive;
         color: #fff;
         text-shadow: 2px 2px 2px #000;
       }
       .subheader-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 2rem;
         text-align: center;
+        font-size: 2rem;
         font-family: 'Cinzel Decorative', cursive;
         color: #fff;
         text-shadow: 2px 2px 2px #000;
@@ -82,7 +64,7 @@
       <h3>COSTA BABY! 2024</h3>
     </div>
     <div class="subheader-container">
-      <h5>Date:   March 8, 2024 </h5>
+      <h5>Date: March 8, 2024</h5>
     </div>
     <div class="countdown-container">
       <span id="countdown"></span>
@@ -94,7 +76,7 @@
       setInterval(() => {
         const currentDate = new Date().getTime();
         const timeRemaining = targetDate - currentDate;
-        const months = Math.floor(timeRemaining / ((1000 * 60 * 60 * 24)*30));
+        const months = Math.floor(timeRemaining / ((1000 * 60 * 60 * 24) * 30));
         const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
         const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
@@ -110,4 +92,5 @@
         images[currentImageIndex].classList.add("active");
       }, 2500);
     </script>
-  </html>
+  </body>
+</html>
